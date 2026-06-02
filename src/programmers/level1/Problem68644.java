@@ -16,13 +16,8 @@ public class Problem68644 {
 
         Set<Integer> set =  new HashSet<>();
 
-        for (int i = 0; i <= numbers.length -1; i++) {
-            for (int j = 0; j <= numbers.length -1; j++) {
-
-                if (i == j){
-                    continue;
-                }
-
+        for (int i = 0; i < numbers.length -1; i++) {
+            for (int j = i+1; j < numbers.length -1; j++) {
                 set.add((numbers[i] + numbers[j]));
             }
         }
