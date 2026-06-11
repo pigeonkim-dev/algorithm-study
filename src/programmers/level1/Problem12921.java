@@ -1,26 +1,30 @@
 package programmers.level1;
 
-import java.util.Arrays;
+import java.util.HashSet;
 
 public class Problem12921 {
     public void run() {
-        int[] result = solution(12345);
-        System.out.println(Arrays.toString(result));//{5,4,3,2,1}
+        int number = 10;
+        int result = solution(number);
+        System.out.println(result);
     }
 
-    public static int[] solution(long n) {
+    public int solution(int n) {
+        int answer = 0;
 
-        String stringNumber = String.valueOf(n);
-        char[] charArray = stringNumber.toCharArray();
-        int[] answer = new int[charArray.length];
-        int j = 0;
+        for (int i = 2; i <= n; i++) {
 
-        for (int i = charArray.length -1 ; i >= 0; i--) {
-                   answer[j]  = charArray[i] - '0';
-                   j++;
+            if (isPrime(i)) {
+                answer++;
+            }
         }
 
         return answer;
-
+    }
+    public boolean isPrime(int i) {
+        for (int j = 2; j <= Math.sqrt(i); j++) {
+            if (i % j == 0) return false;  // 나누어 떨어지면 소수 아님
+        }
+        return true;  // 끝까지 통과하면 소수
     }
 }
