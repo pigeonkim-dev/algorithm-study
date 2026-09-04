@@ -6,7 +6,6 @@
 
 - `src/runner/Runner.java` — 현재 풀이 실행 진입점
 - `src/programmers/` — Programmers 풀이
-- `src/leetcode/` — LeetCode 풀이
 
 ## How to Run
 
