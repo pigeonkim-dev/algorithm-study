@@ -6,7 +6,7 @@ import programmers.level2.*;
 public class Runner {
     public static void main(String[] args) {
         // ▼ 현재 풀이 활성화 — 한 줄만 바꾸면 다른 문제로 전환
-        new Problem12909().run();
+        new Problem42584().run();
 
         // 예시 (LeetCode로 전환 시):
         // new leetcode.easy.TwoSum().run();
